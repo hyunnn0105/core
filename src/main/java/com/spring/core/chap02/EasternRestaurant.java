@@ -1,5 +1,12 @@
-package com.spring.core.chap01_2;
+package com.spring.core.chap02;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+// 기본생성자
+@NoArgsConstructor
+@Setter @Getter
 public class EasternRestaurant implements Restaurant {
 
     // 역할에 의존하기 - 쉐프면 노상관

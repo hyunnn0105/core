@@ -1,5 +1,8 @@
-package com.spring.core.chap01_2;
+package com.spring.core.chap02;
 
+import lombok.Builder;
+
+//@Builder 빌더 생김
 public class Hotel {
 
     // 호텔 레스토랑 운영 의존관계?

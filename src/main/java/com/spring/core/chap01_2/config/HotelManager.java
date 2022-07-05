@@ -11,16 +11,15 @@ import com.spring.core.chap01_2.*;
 // 여기서 모든것을 결정하고있음!! return
 
 public class HotelManager {
-    // 쉐프객체를 생성하여 리던하는 메서드
+    // 쉐프객체를 생성하여 리던하는 메서드 -> Bean
     public Chef chef(){
-        return new KimChef();
+        return new JuanChef();
     }
     public Course course(){
-        return new SushiCourse();
-
+        return new FrendhCourse();
     }
     public Restaurant restaurant(){
-        return new EasternRestaurant(chef(), course());
+        return new WesternRestaurant(chef(), course());
     }
     public Hotel hotel(){
         return new Hotel(restaurant(), chef());
