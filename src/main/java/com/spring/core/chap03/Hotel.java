@@ -24,6 +24,7 @@ public class Hotel {
 
     // 내가 주입받을 빈의 명칭 입력
         //생성자 주입 사용시 생성자가 딱 한개면 오토와이어없이도 자동으로 생성자주입을 수행
+    // @Qualifier(의존할 객체) -> 의존객체 선택
     @Autowired // 자동의존성 주입
     public Hotel(@Qualifier("EasternRestaurant") Restaurant restaurant
             , @Qualifier("kc") Chef chef){
