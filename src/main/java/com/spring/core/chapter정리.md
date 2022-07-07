@@ -63,7 +63,7 @@ HotelConfig + xml 생성
     @Configuration
     public class HotelConfig {
     
-        // 빈 등록 방식 1. 생성자 주입 , 2.세터 주입
+        // 빈 등록 방식 1. 생성자 주입
         @Bean
         public Chef chef(){
             // 주입할거X
@@ -101,3 +101,24 @@ HotelConfig + xml 생성
        return er;
        }
 <br>
+
+3. xml 작성
+https://docs.spring.io/spring-framework/docs/4.2.x/spring-framework-reference/html/xsd-configuration.html
+
+   1. 여기서 xml 가져오기
+   2. id는 빈 이름 지정하고, class속성에는 생성할 객체의 풀 패키지경로
+
+          <bean id="c" class="com.spring.core.chap02.JuanChef" />
+      
+          <bean id="sc" class="com.spring.core.chap02.SushiCourse" />
+          <bean id="fc" class="com.spring.core.chap02.FrendhCourse" />
+   3. 의존성 강화 시작
+
+         <!--    의존성 강화 시작~~~ -->
+          <bean id="res" class="com.spring.core.chap02.WesternRestaurant">
+              <!--   setter 주입 태그 name속성에는 필드명, ref에는 참조할 빈의 아이디  -->
+              <property name="chef" ref="c" />
+              <property name="course" ref="fc" />
+          </bean>
+      1. 
+5. 
